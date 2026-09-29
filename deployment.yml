@@ -18,6 +18,6 @@ spec:
     spec:
       containers:
         - name: deploy-cont
-          image: chakradhar098/paytm:movie
+          image: chakradhar098/paytm:train
           ports:
             - containerPort: 80
