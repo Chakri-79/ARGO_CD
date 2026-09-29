@@ -1,0 +1,22 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-pod
+  labels:
+    app: swiggy
+  namespace: dev
+spec:
+  containers:
+    - name: ns-cont
+      image: chakradhar098/swiggy:instamart
+      ports:
+        - containerPort: 80 
+  resources:
+    requests:
+      cpu: "500m"
+      memory: "100Mi"
+    limits:
+      cpu: "500m"
+      memory: "100Mi"
+

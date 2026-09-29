@@ -1,0 +1,23 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-deployment
+  annotations:
+    kubernetes.io/change-cause: "new image updted to Movie tickets"
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: swiggy
+
+  template:
+    metadata:
+      labels:
+        app: swiggy
+    spec:
+      containers:
+        - name: deploy-cont
+          image: chakradhar098/paytm:movie
+          ports:
+            - containerPort: 80
