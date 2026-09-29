@@ -18,6 +18,6 @@ spec:
     spec:
       containers:
         - name: deploy-cont
-          image: chakradhar098/paytm:train
+          image: chakradhar098/swiggy:dineout
           ports:
             - containerPort: 80
